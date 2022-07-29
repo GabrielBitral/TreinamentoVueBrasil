@@ -35,10 +35,10 @@ import services from '../../services'
 import useStore from '../../hooks/useStore'
 
 const LABELS = {
-  all: 'Todos',
-  issue: 'Problemas',
-  idea: 'Ideias',
-  other: 'Outros'
+  all: 'All',
+  issue: 'Problems',
+  idea: 'Idea',
+  other: 'Others'
 }
 
 const COLORS = {
