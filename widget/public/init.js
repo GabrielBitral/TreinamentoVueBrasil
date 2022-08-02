@@ -1,13 +1,12 @@
-function init (apiKey) {
-
-  async function handleLoadWidget () {
+function init(apiKey) {
+  async function handleLoadWidget() {
     const page = `${window.location.origin}${window.location.pathname}`
     const fp = await window.FingerprintJS.load()
     const fingerprint = await fp.get()
 
     const WIDGET_URL = `https://GabrielBitral-feedbacker-widget.netlify.app?api_key=${apiKey}&page=${page}&fingerprint=${fingerprint.visitorID}`
-    const config = { method: 'HEAD'}
-    const res = await fetch(`https://backend-treinamento-vue3-brasil.vercel.app/exists?apikey=${apikey}`, config)
+    const config = { method: 'HEAD' }
+    const res = await fetch(`https://backend-treinamento-vue3-brasil.vercel.app/apikey/exists?apikey=${apikey}`, config)
 
     if (res.status === 200) {
       const iframe = document.createElement('iframe')
@@ -35,7 +34,7 @@ function init (apiKey) {
       return
     }
 
-    console.log('* [feedbacker] was not loaded because apikey does not exist')
+    console.log('* [feedbacker] was not loaded because apikey does not exists')
   }
 
   const script = document.createElement('script')
