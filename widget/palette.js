@@ -5,7 +5,9 @@ module.exports = {
     info: '#8296FB',
     graydark: '#C0BCB0',
     warning: '#E4B52E',
-    danger: '#F88676'
+    danger: '#F88676',
+    cian: '#30a29c',
+    success: '#63C3BE'
   },
   mediumslateblue: {
     50: '#f6f9fd',
